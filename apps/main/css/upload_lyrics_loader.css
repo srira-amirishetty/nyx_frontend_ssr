@@ -1,0 +1,7 @@
+.lyrics_modal_loader{
+    @apply w-3/4 absolute top-[50rem] outline-none pt-5 pb-10 pl-5 bg-[#3B226F]
+}
+
+.lyrics_login{
+    @apply w-[30rem] absolute top-[50rem] outline-none pt-5 pb-10 pl-5 bg-[#3B226F]
+}

@@ -1,0 +1,31 @@
+img {
+  display: block;
+  max-width: 100%;
+}
+.main-container {
+  max-height: 200px;
+  width: 35vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.img-container {
+  margin-bottom: 10px;
+}
+.cropped-container {
+  width: 200px;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  background-color: ghostwhite;
+  padding: 10px 10px;
+  display: none;
+  margin-top: 10px;
+}
+
+#output {
+  margin: 0 5px;
+  display: block;
+  max-width: 100%;
+}

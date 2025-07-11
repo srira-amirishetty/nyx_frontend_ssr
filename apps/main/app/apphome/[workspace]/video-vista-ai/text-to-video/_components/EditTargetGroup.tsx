@@ -1,0 +1,246 @@
+"use client";
+import React, { useState, useEffect } from "react";
+import Select from "react-select";
+import CrossIcon from "./CrossIcon";
+import Button from "@nyx-frontend/main/components/Button";
+import { TARGRTGROUP_GENDER } from "@nyx-frontend/main/utils/productConstants";
+import classNames from "@nyx-frontend/main/utils/classNames";
+import { ageGroup, region } from "@nyx-frontend/main/utils/productConstants";
+import { TGColourStyles } from "@nyx-frontend/main/utils/productStyle";
+import { useForm, Controller } from "react-hook-form";
+import { useMutation } from "@tanstack/react-query";
+import { addTargetGroupServices } from "@nyx-frontend/main/services/brandService";
+import { toast } from "react-toastify";
+import { TargetGroupResponse } from "./types";
+import AgeRangeSlider from "@nyx-frontend/main/components/AgeRangeSlider";
+
+type EditTargetGroupProps = {
+  onCancel: () => void;
+  onSuccess: (data: TargetGroupResponse) => void;
+  onDelete: () => void;
+  selectedData: TargetGroupResponse;
+  id: string;
+  brandDetails: { id: string };
+};
+
+function EditTargetGroup({
+  onCancel,
+  onSuccess,
+  onDelete,
+  selectedData,
+  id,
+  brandDetails,
+}: EditTargetGroupProps) {
+  const {
+    control,
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
+    mode: "onChange",
+    defaultValues: {
+      targetGroupName: selectedData.name,
+      targetGroupGender: selectedData.gender,
+      //ageGroup: ageGroup.find((age) => age.value === selectedData.age_group),
+      region: region.find((r) => r.value === selectedData.region),
+    },
+  });
+
+  const [ageRange, setAgeRange] = useState<[number, number]>([18, 65]);
+
+  useEffect(() => {
+    if (selectedData?.age_group) {
+      const parsedAgeRange = selectedData.age_group.split("-").map(Number);
+      if (parsedAgeRange.length === 2) {
+        setAgeRange(parsedAgeRange as [number, number]);
+      }
+    }
+  }, [selectedData]);
+
+  const mutateAddTargetgroup = useMutation({
+    mutationKey: ["edit-TargetGroup-vid", selectedData.id],
+    mutationFn: addTargetGroupServices,
+    onSuccess: (res: { targetGroup: TargetGroupResponse }) => {
+      onSuccess(res.targetGroup);
+      reset();
+    },
+    onError: (error) => {
+      console.log(error);
+      toast.error(
+        "Error during to update target group, please try after sometime"
+      );
+    },
+  });
+
+  const onSubmit = (data: any) => {
+    const newData = {
+      id: id,
+      name: data.targetGroupName,
+      //age_group: data.ageGroup.value,
+      age_group: `${ageRange[0]}-${ageRange[1]}`,
+      region: data.region.value,
+      gender: data.targetGroupGender,
+      brand_id: brandDetails.id ? Number(brandDetails.id) : null,
+      target_group_id: Number(id),
+      workspace_id: localStorage.getItem("workspace_id"),
+    };
+    mutateAddTargetgroup.mutate(newData);
+  };
+
+  const onCancelHandler = () => {
+    reset();
+    onCancel();
+  };
+
+  const onDeleteHandler = () => {
+    onDelete();
+  };
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="flex justify-between">
+        <div className="text-xl font-bold text-white">Edit Target Group</div>
+
+        <div className="flex">
+          <div className="pr-3 cursor-pointer" onClick={onDeleteHandler}>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 21C6.45 21 5.97917 20.8042 5.5875 20.4125C5.19583 20.0208 5 19.55 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8042 20.0208 18.4125 20.4125C18.0208 20.8042 17.55 21 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <button className="cursor-pointer" onClick={onCancelHandler}>
+            <CrossIcon className="w-6 h-6 text-white" />
+            <span className="sr-only">Close</span>
+          </button>
+        </div>
+      </div>
+      <div className="w-full my-5 flex flex-col gap-5">
+        <div className="w-full flex flex-col gap-2">
+          <div className="text-white text-base">
+            Target Name <span className="text-[#E26971]">*</span>
+          </div>
+          <input
+            type="text"
+            className="w-full bg-transparent border border-[#8297BD] rounded-md p-2 font-normal text-white placeholder:text-sm"
+            placeholder="Suggest Target Group Name"
+            {...register("targetGroupName", { required: true })}
+            onFocus={(e) => (e.target.placeholder = "")}
+            onBlur={(e) => (e.target.placeholder = "Suggest Target Group Name")}
+          />
+          {errors.targetGroupName && (
+            <p className="text-nyx-red text-xs">
+              Please Enter Target Group Name
+            </p>
+          )}
+        </div>
+        <div className="w-full flex flex-col gap-2">
+          <div className="text-white text-base">
+            Gender <span className="text-[#E26971]">*</span>
+          </div>
+          <div className="w-full grid grid-cols-3 gap-3">
+            {TARGRTGROUP_GENDER?.map((item) => (
+              <div key={`target-group-gender-${item?.name}`} className="w-full">
+                <input
+                  type="radio"
+                  value={item?.name}
+                  {...register("targetGroupGender", { required: true })}
+                  className="hidden peer"
+                  id={`target-group-gender-${item?.name}`}
+                />
+                <label
+                  htmlFor={`target-group-gender-${item?.name}`}
+                  className={classNames(
+                    "hover:bg-nyx-sky text-white transition-colors text-sm font-normal block border border-[#8297BD] hover:border-nyx-sky rounded cursor-pointer text-center py-2 px-4",
+                    " border-white bg-transparent text-white peer-checked:bg-nyx-sky"
+                  )}
+                >
+                  {item?.name}
+                </label>
+              </div>
+            ))}
+          </div>
+          {errors.targetGroupGender && (
+            <p className="text-nyx-red text-xs">
+              Please Select Target Group Gender
+            </p>
+          )}
+        </div>
+        <div className="w-full flex flex-col gap-2">
+          <div className="text-white text-base">
+            Age Group <span className="text-[#E26971]">*</span>
+          </div>
+          {/* <Controller
+            name="ageGroup"
+            control={control}
+            render={({ field }) => (
+              <Select
+                className="text-sm md:text-base"
+                options={ageGroup}
+                placeholder="Select Age"
+                menuPlacement="top"
+                styles={TGColourStyles}
+                {...field}
+                components={{
+                  IndicatorSeparator: () => null,
+                }}
+              />
+            )}
+            rules={{ required: true }}
+          /> */}
+          {/* {errors.ageGroup && (
+            <p className="text-nyx-red text-xs">
+              Please Select Target Age Group
+            </p>
+          )} */}
+          <AgeRangeSlider ageRange={ageRange} setAgeRange={setAgeRange} />
+        </div>
+        <div className="w-full flex flex-col gap-2">
+          <div className="text-white text-base">
+            Region <span className="text-[#E26971]">*</span>
+          </div>
+          <Controller
+            name="region"
+            control={control}
+            render={({ field }) => (
+              <Select
+                className="text-sm md:text-base"
+                options={region}
+                menuPlacement="top"
+                placeholder="Select Region"
+                styles={TGColourStyles}
+                {...field}
+                components={{
+                  IndicatorSeparator: () => null,
+                }}
+              />
+            )}
+            rules={{ required: true }}
+          />
+          {errors.region && (
+            <p className="text-nyx-red text-xs">Please Select Region</p>
+          )}
+        </div>
+      </div>
+
+      <div className="w-full flex gap-4 mt-6 justify-center items-center">
+        <Button className="rounded-full w-40" onClick={onCancelHandler}>
+          Cancel
+        </Button>
+        <Button className="rounded-full w-40">
+          {mutateAddTargetgroup.isPending ? "Updating..." : "Next"}
+        </Button>
+      </div>
+    </form>
+  );
+}
+
+export default EditTargetGroup;

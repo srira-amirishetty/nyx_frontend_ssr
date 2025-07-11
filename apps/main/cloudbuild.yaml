@@ -1,0 +1,49 @@
+---
+steps:
+  - name: node:20.12.2
+    entrypoint: npm
+    args: ["run", "create-env"]
+    env:
+      - "NEXT_PUBLIC_AI_URL= ${_NEXT_PUBLIC_AI_URL}"
+      - "NEXT_PUBLIC_API_URL= ${_NEXT_PUBLIC_API_URL}"
+      - "NEXT_PUBLIC_IMAGE_URL= ${_NEXT_PUBLIC_IMAGE_URL}"
+      - "NEXT_PUBLIC_RAZORPAY_KEY= ${_NEXT_PUBLIC_RAZORPAY_KEY}"
+      - "NEXT_TELEMETRY_DISABLED= ${_NEXT_TELEMETRY_DISABLED}"
+      - "NEXT_PUBLIC_APT_URL_V2= ${_NEXT_PUBLIC_APT_URL_V2}"
+      - "NEXT_PUBLIC_TEXT2IMAGE_URL= ${_NEXT_PUBLIC_TEXT2IMAGE_URL}"
+      - "NEXT_PUBLIC_TEXT2VIDEO_URL= ${_NEXT_PUBLIC_TEXT2VIDEO_URL}"
+      - "NEXT_PUBLIC_IMAGE2IMAGE_URL= ${_NEXT_PUBLIC_IMAGE2IMAGE_URL}"
+      - "NEXT_PUBLIC_IMAGE2VIDEO_URL= ${_NEXT_PUBLIC_IMAGE2VIDEO_URL}"
+      - "NEXT_PUBLIC_LYRICS_URL= ${_NEXT_PUBLIC_LYRICS_URL}"
+      - "NEXT_PUBLIC_MUSIC_URL= ${_NEXT_PUBLIC_MUSIC_URL}"
+      - "NEXT_PUBLIC_ANNO_URL= ${_NEXT_PUBLIC_ANNO_URL}"
+      - "NEXT_PUBLIC_ENVIRONMENT= ${_NEXT_PUBLIC_ENVIRONMENT}"
+      - "NEXT_PUBLIC_MODEL_AI_URL= ${_NEXT_PUBLIC_MODEL_AI_URL}"
+      - "SERVICE_NAME= {_SERVICE_NAME}"
+
+  - name: "gcr.io/cloud-builders/npm"
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        sed -i "s/##_SERVICE_NAME##/${_SERVICE_NAME}/" app.yaml
+
+  - name: gcr.io/cloud-builders/npm
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        npm install
+        npm run build
+
+  - name: gcr.io/cloud-builders/gcloud
+    args:
+      - app
+      - deploy
+      - --quiet
+      - --version=${_NEXT_PUBLIC_ENVIRONMENT}
+      - --project=$PROJECT_ID
+      - --stop-previous-version
+
+options:
+  logging: CLOUD_LOGGING_ONLY

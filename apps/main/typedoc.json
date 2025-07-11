@@ -1,0 +1,32 @@
+{
+  // Comments are supported, like tsconfig.json
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": [
+    "app/*.ts",
+    "app/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "components/*.ts",
+    "components/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "hooks/*.ts",
+    "hooks/*.tsx",
+    "services/*.ts",
+    "services/*.tsx",
+    "utils/*.ts",
+    "utils/*.tsx",
+    "shared/*.ts",
+    "shared/*.tsx"
+  ],
+  "out": "docs",
+  "exclude": [
+    "*.stories.ts",
+    "*.stories.tsx",
+    "**/*.stories.ts",
+    "**/*.stories.tsx",
+    "**/*+(e2e|spec).ts"
+  ],
+  "plugin": ["@mxssfd/typedoc-theme"],
+  "theme": "my-theme"
+}

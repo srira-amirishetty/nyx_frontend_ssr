@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "default",
+  "rsc": false,
+  "tsx": true,
+  "tailwind": {
+    "config": "tailwind.config.ts",
+    "css": "src/index.css",
+    "baseColor": "slate",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "aliases": {
+    "components": "@nyx-workspace/main/components",
+    "utils": "@nyx-workspace/main/lib/utils",
+    "ui": "@nyx-workspace/main/components/ui",
+    "lib": "@nyx-workspace/main/lib",
+    "hooks": "@nyx-workspace/main/hooks"
+  }
+}

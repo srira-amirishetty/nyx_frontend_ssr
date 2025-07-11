@@ -1,0 +1,12 @@
+dispatch:
+  - url: "dev-api.nyx.today/*"
+    service: dev-nyx-api
+
+  - url: "api.nyx.today/*"
+    service: nyx-api
+
+  - url: "dev.nyx.today/*"
+    service: dev-nyx-frontend
+
+  - url: "nyx.today/*"
+    service: nyx-frontend

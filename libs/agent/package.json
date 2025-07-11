@@ -1,0 +1,21 @@
+{
+  "name": "@nyx-frontend/agent",
+  "version": "0.0.1",
+  "nx": {
+    "name": "agent"
+  },
+  "main": "./src/index.jsx",
+  "types": "./src/index.jsx",
+  "exports": {
+    ".": {
+      "types": "./src/index.jsx",
+      "import": "./src/index.jsx",
+      "default": "./src/index.jsx"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {},
+  "devDependencies": {
+   
+  }
+}

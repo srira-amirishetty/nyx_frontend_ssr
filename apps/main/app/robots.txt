@@ -1,0 +1,18 @@
+# Rules for all user agents
+User-agent: *
+Allow: /
+Disallow: /apphome/login
+Disallow: /apphome/*/
+
+# Rules for Googlebot
+User-agent: Googlebot
+Allow: /
+
+
+# Rules for Googlebot-Image
+User-agent: Googlebot-Image
+Allow: /
+
+
+# Sitemap location
+Sitemap: https://nyx.today/sitemap.xml

@@ -1,0 +1,78 @@
+.imageslider_css .slick-prev {
+  left: 30px !important;
+  transform: unset !important;
+  z-index: 999;
+}
+
+.imageslider_css .slick-next {
+  right: 42px !important;
+  transform: unset !important;
+  z-index: 999;
+}
+
+.imageslider_css .slick-prev::before,
+.imageslider_css .slick-next::before {
+  font-size: 30px;
+}
+
+.imageslider_css {
+  margin: 0 auto;
+  width: 99.9%;
+}
+
+.price_package_hover {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 20;
+}
+
+.price_package:hover .price_package_hover {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+@media screen and (max-width: 1400px) {
+  .imageslider_css {
+    width: 100%;
+  }
+}
+
+.custom-checkbox {
+  appearance: none; /* Remove default checkbox styling */
+  width: 15px;
+  height: 15px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  position: relative; /* Allow positioning of pseudo-elements */
+}
+
+/* Styling for the checked state */
+.custom-checkbox:checked {
+  background-color: #F1BB2E;
+  border-color: #F1BB2E;
+}
+
+/* Add a tick/checkmark */
+.custom-checkbox:checked::after {
+  content: '✓'; /* The checkmark */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px; /* Adjust size */
+  color: black; /* Checkmark color */
+  font-size: 12px; /* Adjust size */
+  font-weight: bold; /* Adjust font weight */
+}
+
+@media screen and (min-width: 1919px) {
+  .seeMore {
+   margin-right: 75px
+  }
+}

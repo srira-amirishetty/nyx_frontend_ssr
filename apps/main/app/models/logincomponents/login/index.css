@@ -1,0 +1,181 @@
+@media screen and (max-width: 1180px) {
+  /* Add your tablet-specific styles here */
+  /* For example: */
+  .box1 {
+    display: flex;
+    flex-direction: column-reverse;
+    /* height: 100vh; */
+  }
+  .box2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0 20px;
+  }
+
+  .box4 {
+    margin-top: 50px;
+  }
+
+  .maindiv {
+    margin-top: 60px;
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+    margin: 40px;
+  }
+  .noPosition_sec {
+    width: 100%;
+    background-image: url("https://storage.googleapis.com/nyxassets-new/assets/images/home/gradiant-image.png");
+    background-size: unset !important;
+    background-position-y: 620px !important;
+    background-position-y: 620px !important;
+    background-position-x: -250px !important;
+    background-repeat: no-repeat;
+    background-color: #130625;
+    height: 950px !important;
+  }
+
+  /* Adjust font sizes, padding, margins, etc. for tablet screens */
+}
+
+@media screen and (max-width: 770px) {
+  /* Add your tablet-specific styles here */
+  /* For example: */
+  .box1 {
+    height: 100vh;
+  }
+  .box2 {
+    display: none;
+  }
+
+  .box4 {
+    margin-top: 70px;
+  }
+  
+  .navbutton {
+    margin-right: -5px;
+  }
+  .icon {
+    margin-left: 30px;
+  }
+
+  .noPosition_sec {
+    width: 100%;
+    background-image: url("https://storage.googleapis.com/nyxassets-new/assets/images/home/gradiant-image.png");
+    background-position: top !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-color: #130625;
+  }
+
+  /* Adjust font sizes, padding, margins, etc. for tablet screens */
+}
+
+@media screen and (max-width: 1232px) and (min-width: 770px) {
+  /* Add your tablet-specific styles here */
+  /* For example: */
+  .maindiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    margin: 40px;
+  }
+
+  .ptag {
+    display: none;
+  }
+
+  .imgdiv {
+    width: 340px;
+    margin-bottom: -20px;
+  }
+
+  .mainp {
+    margin-bottom: 20px;
+    margin-top: -10px;
+    margin-top: -10px;
+  }
+  .noPosition_sec {
+    width: 100%;
+    background-image: url("https://storage.googleapis.com/nyxassets-new/assets/images/home/gradiant-image.png");
+    background-size: unset !important;
+    background-position-y: 620px !important;
+    background-position-y: 620px !important;
+    background-position-x: -250px !important;
+    background-repeat: no-repeat;
+    background-color: #130625;
+    height: 950px !important;
+  }
+
+  /* Adjust font sizes, padding, margins, etc. for tablet screens */
+}
+@media screen and (max-width: 1030px) {
+  /* Add your tablet-specific styles here */
+  /* For example: */
+
+  .maindiv {
+    margin-top: 30px;
+    margin-bottom: 100px;
+    margin: 40px;
+  }
+
+  .ptag {
+    display: none;
+  }
+
+  .imgdiv {
+    width: 300px;
+    margin-bottom: -20px;
+  }
+
+  .mainp {
+    margin-bottom: 20px;
+    margin-top: 60px;
+    font-size: 46px;
+    font-size: 46px;
+  }
+
+  .basicp {
+    font-size: 13px;
+  }
+
+  /* Adjust font sizes, padding, margins, etc. for tablet screens */
+}
+
+.noPosition_sec {
+  width: 100%;
+  background-image: url("https://storage.googleapis.com/nyxassets-new/assets/images/home/gradiant-image.png");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #130625;
+}
+
+body {
+  background-color: #130625;
+}
+
+.border-gradient {
+  background: linear-gradient(to right, #E35BDE, #A886FF);
+}
+
+@media screen and (max-width: 600px) {
+  .noPosition_sec {
+    height: auto !important;
+  }
+}
+.buttonShadowTransition {
+  transition: all ease 300ms;
+}
+
+.coloricon {
+  display: none;
+}
+.paranticon:hover .coloricon {
+  display: block;
+}
+.paranticon:hover .normalicon {
+  display: none;
+}

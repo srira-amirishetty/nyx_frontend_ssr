@@ -1,0 +1,45 @@
+.emojies-style aside {
+  background-color: transparent;
+  border: none;
+}
+.emojies-style input {
+  background-color: transparent;
+}
+.emojies-style .epr-emoji-category-label {
+  background-color: transparent;
+  display: none;
+}
+
+.emojies-style .epr-skin-tones {
+  display: none;
+}
+.icons-style-liabrary .modalFade {
+  position: relative !important;
+  background-color: transparent !important;
+}
+.icons-style-liabrary .pickButton {
+  margin: 10px !important;
+  border: 1px solid #f6f6f6 !important;
+}
+.icons-style-liabrary .modalWrapper {
+  background-color: transparent !important;
+  height: 90vh;
+}
+.icons-style-liabrary .searchBar {
+  padding: 0px 10px !important;
+  border: 1px solid #f6f6f6 !important;
+  margin: 20px 45px !important;
+  color: #f6f6f6 !important;
+  border-radius: 8px !important;
+}
+.icons-style-liabrary .searchInput {
+  background-color: transparent !important;
+  font-size: 16px !important;
+  color: white !important;
+  border: none !important;
+  margin: 0 !important;
+}
+.icons-style-liabrary .searchInput:focus-visible {
+  outline: none !important;
+  border: none !important;
+}

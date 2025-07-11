@@ -1,0 +1,6 @@
+.dashboardTableStyle::-webkit-scrollbar {
+  display: none;
+}
+.selectStyle .css-1dyz3mf {
+  flex-wrap: nowrap !important;
+}

@@ -1,0 +1,1 @@
+export const PromtsSubText = "Enter more lyrics to get better results";

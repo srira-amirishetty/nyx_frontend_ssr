@@ -1,0 +1,1 @@
+export type TActiveTabs = "bg-remover" | "inpainting" | "generative-fill" | null;

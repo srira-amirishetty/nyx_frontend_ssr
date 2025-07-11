@@ -1,0 +1,17 @@
+.poweredby_section_slider .slick-next {
+  right: 95px !important;
+  z-index: 999;
+}
+.poweredby_section_slider .slick-prev {
+  left: 95px !important;
+  z-index: 999;
+}
+.poweredby_section_slider .slick-prev:before,
+.poweredby_section_slider .slick-next:before {
+  font-size: 30px !important;
+}
+
+.poweredby_section_slider .slick-next,
+.poweredby_section_slider .slick-prev {
+  transform: unset !important;
+}

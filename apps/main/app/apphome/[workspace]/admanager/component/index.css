@@ -1,0 +1,3 @@
+.stepperHorScroll::-webkit-scrollbar {
+  display: none;
+}

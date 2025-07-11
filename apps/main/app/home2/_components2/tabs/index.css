@@ -1,0 +1,28 @@
+.hw_works_section {
+  background-color: #15072a;
+}
+
+@media screen and (max-width: 320px) {
+  .howit_tab_320 {
+    padding-right: 0px !important;
+  }
+  .howit_gap_320 {
+    gap: 1rem !important;
+  }
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+.truncate-2-lines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}

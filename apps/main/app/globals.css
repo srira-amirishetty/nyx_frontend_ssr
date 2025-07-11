@@ -1,0 +1,533 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .slider-tech .slick-next {
+    @apply right-4 lg:right-12;
+  }
+
+  .slider-tech .slick-prev {
+    @apply left-4;
+    z-index: 9;
+  }
+}
+
+/* video::-webkit-media-controls {
+  display: none !important;
+  opacity: 0; 
+}
+video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+} */
+
+.autofill:-webkit-autofill,
+.autofill:-webkit-autofill:hover,
+.autofill:-webkit-autofill:focus {
+  border: 1px solid #ffeaea16;
+  -webkit-text-fill-color: #f1f1f1;
+  -webkit-box-shadow: 0 0 0px 1000px #ffeaea16 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+:root {
+  --start-gradient: #650b92;
+  --end-gradient: #1d5c9c;
+}
+
+.text-blue {
+  --tw-text-opacity: 1;
+  color: rgb(130 151 189 / var(--tw-text-opacity));
+}
+
+.svg-round {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.svg-circle {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+  stroke-width: 0.9rem;
+}
+
+button:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
+}
+
+.login_bg {
+  background: conic-gradient(
+    from 179.36deg at 49.38% 55.45%,
+    #2e2ba2 -42.97deg,
+    #263e5e 55.83deg,
+    #275787 132.83deg,
+    #2e2ba2 317.03deg,
+    #041414 415.83deg
+  );
+}
+.hiw_bg {
+  background: radial-gradient(
+      107.74% 156.2% at 36.98% 1.39%,
+      #1880bd 0%,
+      rgba(74, 5, 143, 0) 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
+
+.hm_bg_blue {
+  background:
+    radial-gradient(
+        107.74% 156.2% at 36.98% 1.39%,
+        #1880bd 0%,
+        rgba(74, 5, 143, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        172.92% 836.47% at -65.63% -81.87%,
+        #1d5c9c 37.22%,
+        #002a55 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    linear-gradient(275.51deg, #00d8d8 1.7%, #00d8d8 32.68%, #63058f 171.64%);
+  /* transform: rotate(-180deg); */
+}
+
+.footer_all_rights {
+  background:
+    radial-gradient(
+        172.92% 836.47% at -65.63% -81.87%,
+        #031c35 37.22%,
+        #002a55 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    linear-gradient(275.51deg, #00d8d8 1.7%, #00d8d8 32.68%, #63058f 171.64%);
+}
+
+.theme_txt {
+  color: #ffbd59;
+}
+
+.hero_btn {
+  /* border-color: #4c3412; */
+  color: #ffffff;
+  /* box-shadow: 0px 10px 45px rgba(72, 146, 243, 0.7); */
+  box-shadow: 0px 0px 45px 4px rgb(70 165 240 / 70%);
+
+  background:
+    linear-gradient(261.5deg, #041414 5.23%, #041414 90.71%),
+    radial-gradient(
+        101.34% 608.17% at 97.77% 11.87%,
+        #d13946 11.24%,
+        #65191d 87.34%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    linear-gradient(279.04deg, #ff5a5a -5.23%, #3e1fff 146.9%),
+    linear-gradient(279.04deg, #ff5a5a -27.7%, #ff5fa6 88.92%, #ff63dd 172.22%),
+    linear-gradient(279.04deg, #f91e1e -27.7%, #ff37d3 172.22%),
+    linear-gradient(277.71deg, #cb3462 -8.06%, #394c9f 99.18%),
+    linear-gradient(275.42deg, #112d77 0%, #136896 102.48%),
+    linear-gradient(275.51deg, #00d8d8 1.7%, #00d8d8 32.68%, #63058f 171.64%);
+}
+
+.hero_btn:hover {
+  color: #ffbd59;
+  /* border-color: #fdd190; */
+  /* box-shadow: 0px 10px 45px rgb(232 162 0 / 70%); */
+  box-shadow: 0px 0px 45px 8px rgb(232 162 0 / 70%);
+}
+
+.faq_hover {
+  background: #003163;
+}
+
+.faq_bg {
+  background: #091221;
+}
+
+.gray_bg {
+  background: #151515;
+}
+
+.header_bg {
+  background: rgba(4, 20, 20, 0.4);
+  transition: background-color 0.4s ease;
+}
+
+.header_bg_sticky {
+  background: rgb(1, 17, 17);
+  transition: background-color 0.4s ease;
+}
+
+.contact_form {
+  background: conic-gradient(
+    from 179.36deg at 49.38% 55.45%,
+    #2e2ba2 -42.97deg,
+    #041414 55.83deg,
+    #000000 132.83deg,
+    #2e2ba2 317.03deg,
+    #041414 415.83deg
+  );
+}
+
+.theme_yellow {
+  color: #ffcb54;
+}
+
+body.bg_auto {
+  background: linear-gradient(52.6deg, #650b92 0.83%, #1d5c9c 100.51%);
+}
+
+body.bg_auto_auth {
+  background: linear-gradient(241.3deg, #1d5c9c -89.34%, #000000 83.8%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body.bg_auto2 {
+  background: linear-gradient(52.6deg, #650b92 0.83%, #1d5c9c 100.51%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+select option {
+  margin: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-weight: 400;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.react-select__multi-value__label {
+  background-color: #007bff; /* Set the background color to blue */
+  color: #fff; /* Set the text color to white */
+  border-radius: 5px; /* Add a rounded-md border */
+  padding: 2px 5px; /* Add some padding */
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.Basic {
+  background: linear-gradient(180deg, #878487 0%, #4f4e4e 100%),
+    linear-gradient(0deg, #ffcb54, #ffcb54);
+  padding: 15px;
+  border-radius: 11px;
+  cursor: pointer;
+}
+
+.High {
+  color: #4caf50;
+}
+
+.Moderate {
+  color: #ffcb54;
+}
+
+.Low {
+  color: #d13946;
+}
+
+.Insider {
+  font-weight: 500;
+  background: linear-gradient(180deg, #b616b9 0%, #790659 100%),
+    linear-gradient(0deg, #ffcb54, #ffcb54);
+
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.active {
+  color: white;
+}
+div.active {
+  font-weight: 600;
+}
+.not-active {
+  color: #8297bd;
+}
+
+.Elite {
+  font-weight: 500;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(180deg, #175324 0%, #07332b 100%),
+    linear-gradient(0deg, #ffcb54, #ffcb54);
+}
+
+.Royal {
+  font-weight: 500;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(180deg, #040a96 0%, #5a07c4 0.01%, #150383 100%),
+    linear-gradient(0deg, #ffcb54, #ffcb54);
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+
+.stop-sign {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.stop-sign::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.stop-sign::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #ddd;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 30px;
+  border-radius: 0;
+  background: yellow;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 10px;
+  border-radius: 0;
+  background: yellow;
+  cursor: pointer;
+}
+
+.slider-value {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: white;
+}
+
+.slider-max {
+  font-size: 12px;
+  margin-top: 10px;
+  position: relative;
+  left: 94%;
+  color: white;
+}
+.slider-min {
+  color: white;
+}
+
+/* Style for scrollbar track */
+.ReactModal__Content {
+  overflow-y: auto;
+}
+
+/* Style for scrollbar thumb */
+.ReactModal__Content::-webkit-scrollbar-thumb {
+  background-color: #21194c;
+  border-radius: 10px;
+}
+
+/* Style for scrollbar */
+.ReactModal__Content::-webkit-scrollbar {
+  width: 10px;
+  background-color: #3b226f;
+}
+
+.tooltip-container {
+  position: relative;
+}
+
+.tooltip-content {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  font-size: x-small;
+  padding: 0.2rem;
+  border-radius: 0.25rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 999;
+  visibility: hidden;
+}
+
+.tooltip-container:hover .tooltip-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltip-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.bg-colorBack {
+  background-color: #00000080;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+span.ck.ck-powered-by__label:hover {
+  display: none;
+}
+
+.tox .tox-edit-area {
+  border: none !important;
+  background: #3b236f !important;
+}
+
+@layer utilities {
+  .tox.tox-tinymce {
+    @apply !h-[60vh] sm:!h-[14rem] md:!h-[60vh] xs:!h-[15rem];
+  }
+}
+
+.tox.tox-tinymce {
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.quill-container {
+  border: none;
+  border-radius: 0; /* Optionally, set border-radius to 0 to remove any rounded corners */
+}
+
+/* quill editor custom styles */
+.nyx-quill-editor .ql-snow .ql-stroke {
+  @apply !stroke-nyx-gray-1;
+}
+
+.nyx-quill-editor .ql-snow.ql-toolbar button.ql-active .ql-stroke,
+.nyx-quill-editor .ql-snow button:hover .ql-stroke {
+  @apply !stroke-white;
+}
+
+.nyx-quill-editor .ql-snow.ql-toolbar .ql-picker-label {
+  @apply !text-nyx-gray-1;
+}
+
+.nyx-quill-editor .ql-snow.ql-toolbar .ql-picker-label:hover {
+  @apply !text-white;
+}
+
+.nyx-quill-editor .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke {
+  @apply !stroke-white;
+}
+
+.typed-cursor {
+  margin-left: 2px;
+  opacity: 1;
+  font-weight: 100;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.slider-thumb {
+  position: relative;
+}
+
+.slider-thumb::after {
+  content: attr(data-value);
+  position: absolute;
+  top: -30px; /* Adjust this value to position the value above the thumb */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.slider-thumb:hover::after {
+  opacity: 1;
+}
+
+.tooltips {
+  position: absolute;
+  bottom: 100%; /* Adjust based on your layout */
+  left: 0;
+}
+
+.tooltip-trigger:hover + .tooltips {
+  opacity: 100;
+  visibility: visible;
+}
+
+.group:hover .tooltips {
+  opacity: 100;
+  visibility: visible;
+}
+
+.group .tooltips {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}

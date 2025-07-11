@@ -1,0 +1,85 @@
+.sidebar_height {
+  position: absolute;
+  bottom: 0;
+}
+
+.sidebar_bottom_element {
+  position: absolute;
+  bottom: 0;
+}
+
+.right_side_tool {
+  height: 78vh;
+}
+
+.tool-left-panel {
+  width: 35%;
+}
+
+.tool-right-panel {
+  width: 65%;
+}
+
+.brand-timer {
+  width: 700px;
+}
+
+@media screen and (max-width: 1370px) {
+  .brand-timer {
+    width: 83%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  /* .tool-left-panel {
+    width: 30%;
+  }
+  .tool-right-panel {
+    width: 50%;
+  } */
+  .brand-timer {
+    /* width: 600px; */
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .brand-timer {
+    /* width: 500px; */
+  }
+}
+
+/* height media query */
+
+@media screen and (max-height: 700px) {
+  .sidebar_height {
+    position: relative;
+  }
+
+  /* .sidebar_parent_container {
+    height: auto;
+  } */
+  .sidebar_parent_container {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-height: 830px) {
+  .right_side_tool {
+    height: 697px;
+  }
+}
+
+
+.integration_icons:hover .integration-icon-hover {
+  display: block;
+}
+
+
+.integration-icon-hover {
+  display: none;
+}
+
+.integration_icons:hover .integration-icon-normal {
+  display: none;
+}

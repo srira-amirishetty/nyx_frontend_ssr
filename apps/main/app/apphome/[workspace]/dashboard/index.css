@@ -1,0 +1,125 @@
+.hero_container {
+  background: linear-gradient(53deg, #003163 0.83%, #151515 100.51%);
+}
+.products_container {
+  background: linear-gradient(53deg, #650b92 0.83%, #1d5c9c 100.51%);
+}
+.use_container {
+  background: radial-gradient(
+    72.22% 72.22% at 50% 49.67%,
+    #ffcb54 0%,
+    #ba8b1d 100%
+  );
+}
+
+.product_container {
+  background: linear-gradient(52.6deg, #003163 0.83%, #151515 100.51%);
+}
+.sub_container {
+  background: rgba(0, 56, 86, 1);
+}
+.toolsetcontainer {
+  /* background: linear-gradient(52.6deg, #650b92 0.83%, #1d5c9c 100.51%); */
+}
+
+.sub_container2 {
+  background: #3b226f;
+}
+.hw_works {
+  background: linear-gradient(276.66deg, #041414 -1.37%, #003163 100.67%);
+}
+
+.mobile_design {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100px;
+  /* background: linear-gradient(52.6deg, #650b92 0.83%, #1d5c9c 100.51%); */
+  background: #130828;
+}
+
+.card {
+  position: relative;
+}
+.chip{
+ display: none;
+}
+
+.card:hover {
+  background-color: #6139C8;
+  opacity: 1; /* Corrected opacity */
+  z-index: 5;
+  
+}
+
+.card:hover .chip{
+ display: flex;
+  z-index: 8;
+}
+
+.card:hover .product {
+  opacity: 0.3;
+}
+.card:hover .fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(to bottom, rgba(31, 17, 75, 0), #6139C8);
+}
+
+.card:hover .name {
+  z-index: 7;
+}
+
+.image {
+  position: relative;
+  width: 321px;
+  height: 184px;
+}
+
+.image .fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(31, 17, 75, 0), #1F114B);
+}
+
+
+
+
+@media screen and (max-width: 390px) {
+  .box_container {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .mobile_design_box {
+    width: 140px !important;
+    height: 170px !important;
+  }
+}
+@media screen and (max-height: 430px) and (max-width: 1000px) {
+  .appHomeDesktop {
+    display: none;
+  }
+  .mobile_design {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .custom-3xl-width {
+    width: 470px;
+    height:280px
+  }
+
+  /* .custom-image{
+    width:1000px
+  } */
+}
+
+

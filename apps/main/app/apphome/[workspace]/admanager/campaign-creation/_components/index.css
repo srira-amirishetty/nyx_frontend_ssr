@@ -1,0 +1,41 @@
+.stepperHorScroll::-webkit-scrollbar {
+  display: none;
+}
+.sliderStyle .rs-slider-progress-bar {
+  background-color: #ffcb54;
+}
+.sliderStyle .rs-slider-handle::before {
+  border: 2px solid #ffcb54;
+  background-color: #ffcb54;
+}
+
+.custom-dots li.slick-active div {
+  background-color: #5E33FE!important;
+}
+
+.slider-container .slick-track {
+  margin-left: 0;
+}
+
+/* Apply to any element you want thinner scrollbars on */
+.scrollbar-thin {
+  /* For Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 100, 100, 0.5) transparent;
+}
+
+/* For WebKit browsers (Chrome, Safari, Edge) */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.5);
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+

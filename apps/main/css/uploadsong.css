@@ -1,0 +1,75 @@
+/* Customize radio button style */
+.form-radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #cbd5e0;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+  background-color: transparent; /* Set the background color to transparent */
+}
+
+/* Customize radio button on select style */
+.form-radio:checked {
+  border-color: #fbbf24;
+  background-color: #fbbf24; /* Set the dot color to yellow */
+}
+
+
+
+.upload-label p {
+  color: #fff;
+  transition: opacity .2s ease;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  margin: 0 0 10px;
+}
+.upload-label {
+  background-size: cover;
+  width: 184px;
+  max-width: 184px;
+  height: 184px;
+  margin: 0 32px;
+  text-align: center;
+  position: relative;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  transform-origin: center center;
+  z-index: 99;
+}
+.upload-label .upload-p {
+  display: none;
+  margin-bottom: 20px;
+}
+.upload-label:not(.upload-handle).drag-over .upload-p, .upload-label:not(.upload-handle):hover .upload-p {
+  display: block;
+}
+.upload-label .upload-text {
+  font-size: 9px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #21291f;
+}
+.upload-label .upload-text-lower {
+  text-transform: lowercase;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 19px;
+  color: #21291f;
+}
+
+.upload-label:not(.upload-handle).drag-over .upload-p, .upload-label:not(.upload-handle):hover .upload-p {
+  display: block;
+}

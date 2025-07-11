@@ -1,0 +1,85 @@
+.navbar_container {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 234, 234, 0.0875) 0%,
+    rgba(236, 236, 236, 0.085) 100%
+  );
+}
+.hero_sec_pdp {
+  width: 100%;
+  background-image: url("https://storage.googleapis.com/nyxassets-new/assets/images/home/herobg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background: linear-gradient(20deg, #b631b1 -46%, #130625 30.51%); */
+  position: relative;
+  background-color: #130625;
+}
+.hero_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+.hero_content_title {
+  width: max-content;
+}
+.buttonShadowTransition {
+  transition: all ease 300ms;
+}
+
+.box_morphism {
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(4px);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.usecases_section {
+  background-color: #130625;
+
+  background-image: url("https://i.ibb.co/2q0YgjQ/Ellipse-21.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+.hw_works {
+  background-image: url("https://i.ibb.co/0jXFMbv/Group-1707479150.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background: linear-gradient(20deg, #b631b1 -46%, #130625 30.51%); */
+  position: relative;
+  background-color: #130625;
+}
+.border-gradient {
+  border-image: linear-gradient(270deg, #b134b5 -3.87%, #7149d7 107.99%) 1;
+}
+
+@media screen and (max-width: 600px) {
+  .box_morphism img {
+    width: 93px;
+    height: 93px;
+  }
+  .hero_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+  }
+  .hero_content_title {
+    width: auto;
+  }
+}
+@media screen and (max-width: 320px) {
+  .powerdby_img_320 {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}

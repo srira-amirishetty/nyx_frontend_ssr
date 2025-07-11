@@ -1,0 +1,30 @@
+.custom-checkbox {
+  appearance: none; /* Remove default checkbox styling */
+  width: 15px;
+  height: 15px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  position: relative; /* Allow positioning of pseudo-elements */
+}
+
+/* Styling for the checked state */
+.custom-checkbox:checked {
+  background-color: #F1BB2E;
+  border-color: #F1BB2E;
+}
+
+/* Add a tick/checkmark */
+.custom-checkbox:checked::after {
+  content: '✓'; /* The checkmark */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px; /* Adjust size */
+  color: black; /* Checkmark color */
+  font-size: 12px; /* Adjust size */
+  font-weight: bold; /* Adjust font weight */
+}

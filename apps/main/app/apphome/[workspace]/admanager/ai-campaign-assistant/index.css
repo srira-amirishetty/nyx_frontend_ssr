@@ -1,0 +1,100 @@
+.dashboardTableStyle::-webkit-scrollbar {
+    display: none;
+  }
+  .selectStyle .css-1dyz3mf {
+    flex-wrap: nowrap !important;
+  }
+  
+
+  .truncate-conditions {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    max-height: 3em;
+    position: relative;
+     /* Indicate interactivity */
+  } 
+  
+  .tooltip-box {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: -70%; /* Position below the parent element */
+    left: 0; /* Align to the left of the parent */
+    transform: translateY(8px); /* Add spacing below */
+    background: #1E1239; /* Black background */
+    color: white; /* White text */
+    border-radius: 4px; /* Rounded corners */
+    padding: 1em; /* Padding inside the box */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow for visibility */
+    z-index: 1000; /* Ensure it appears above other elements */
+    max-width: 500px; /* Limit width */
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Ensure long words break */
+    font-size: 0.875rem; /* Smaller font */
+    white-space: normal; /* Allow multi-line text */
+    opacity: 0; /* Hidden by default */
+    pointer-events: none; /* Prevent interaction when hidden */
+    transition: opacity 300ms ease-in-out; /* Smooth opacity transition */
+  }
+  
+  .w-\[500px\]:hover .tooltip-box {
+    display: block; /* Show tooltip on hover */
+    opacity: 1; /* Fade in the tooltip */
+    pointer-events: auto; /* Enable interaction when visible */
+  }
+  
+
+  /* Style for the campaign list */
+.campaign-list {
+  list-style-type: disc;
+  padding-left: 1rem; /* Adds padding to the left */
+}
+
+/* Style for the tooltip box */
+.campaign-tooltip-box {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: -70%; /* Position directly below the parent */
+  left: 40%; /* Align it to the left of the parent */
+  transform: translateY(8px); /* Add some space below */
+  background: #1E1239; /* Black background */
+  color: white; /* White text */
+  border-radius: 4px; /* Rounded corners */
+  padding: 1em; /* Padding for spacing */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow for visibility */
+  z-index: 1000; /* Ensure it appears above other elements */
+  max-width: 500px; /* Limit the width */
+  word-wrap: break-word; /* Break long words */
+  overflow-wrap: break-word; /* Ensure long words wrap */
+  font-size: 0.875rem; /* Smaller font */
+  white-space: normal; /* Allow multi-line content */
+  opacity: 0; /* Initially hidden */
+  pointer-events: none; /* Prevent interaction when hidden */
+  transition: opacity 300ms ease-in-out; /* Smooth fade-in transition */
+}
+
+/* Show tooltip when hovering over the td */
+.pl-\[20px\]:hover .campaign-tooltip-box {
+  display: block; /* Show tooltip on hover */
+  opacity: 1; /* Fade it in */
+  pointer-events: auto; /* Enable interaction when visible */
+}
+
+  
+  
+  
+
+
+/* Customize the horizontal scrollbar */
+.scrollable-container::-webkit-scrollbar {
+  height: 5px;  /* Adjust the height of the horizontal scrollbar */
+}
+
+/* Customize the scrollbar track (background) */
+  
+  
+  
+  

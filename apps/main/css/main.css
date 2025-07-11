@@ -1,0 +1,194 @@
+/* @media only screen and (max-width: 600px) {
+  .ReactModal__Content.ReactModal__Content--after-open {
+    padding: 0px !important;
+    border: none !important;
+    width: 80%;
+    height: 70%;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .ReactModal__Content.ReactModal__Content--after-open {
+    padding: 0px !important;
+    border: none !important;
+    width: 80%;
+    height: 70%;
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+  .ReactModal__Content.ReactModal__Content--after-open {
+    padding: 0px !important;
+    border: none !important;
+    width: 30%;
+    height: 60%;
+  }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1600px) {
+  .ReactModal__Content.ReactModal__Content--after-open {
+    padding: 0px !important;
+    border: none !important;
+    width: 30%;
+    height: 60%;
+  }
+}
+@media only screen and (min-width: 1601px) {
+  .ReactModal__Content.ReactModal__Content--after-open {
+    padding: 0px !important;
+    border: none !important;
+    width: 30%;
+    height: 60%;
+  }
+} */
+
+.bg_auth {
+  background: linear-gradient(241.3deg, #1d5c9c -89.34%, #000000 83.8%);
+  height: 100vh;
+}
+
+.login_section {
+  background: rgba(0, 0, 0, 0.5);
+  /* background: linear-gradient(27.34deg, #1D5C9C -73.94%, #000000 73.13%); */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  /* border-radius: 16px; */
+  border-radius: 15px;
+  /* height: 34rem; */
+}
+
+@media only screen and (max-width: 900px) {
+  .login_section {
+    left: 0rem;
+  }
+}
+
+.ql-container.ql-snow {
+  border: none !important;
+}
+.ql-editor p,
+h1,
+h2,
+h3 {
+  color: white;
+  /* font-weight: 300; */
+}
+.ql-toolbar.ql-snow {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border: none !important;
+}
+.ql-toolbar .ql-icon {
+  stroke: white !important;
+  color: white !important;
+  stroke-width: 2px !important;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-dot {
+  width: 5px;
+  height: 5px;
+  background-color: white; /* Adjust the color as needed */
+  border-radius: 50%;
+  margin: 0 5px;
+  animation: loading-animation 1.5s infinite ease-in-out;
+}
+
+@keyframes loading-animation {
+  0%,
+  20% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.ql-editor.ql-blank::before {
+  color: #8297bd !important; /* Set your desired color here */
+  font-weight: 100 !important;
+  font-size: 12px;
+}
+
+/* For Webkit Browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #A388C5; /* Set the color and transparency of the thumb */
+  border-radius: 6px; /* Set the border radius of the thumb */
+}
+
+/* For Firefox */
+/* Note: 'scrollbar-width' and 'scrollbar-color' are supported in Firefox version 64 and later */
+/* For older versions of Firefox, you may need to use '-moz-' prefix (e.g., -moz-scrollbar-color) */
+
+html {
+  scrollbar-width: thin; /* Set the width of the scrollbar */
+  scrollbar-color: #A388C5; /* Set the color and transparency of the thumb and track */
+}
+
+.ReactModal__Content.ReactModal__Content--after-open.FileExplorer {
+  @apply absolute overflow-auto rounded mr-[-50%] -translate-x-2/4  lg:w-[50%] xl:w-[50%] md:w-[62%] w-[90%] -translate-y-2/4 z-[9999] p-5 border-[none] inset-[50%_auto_auto_50%];
+  background: rgb(59, 34, 111);
+  outline: none;
+}
+
+.ReactModal__Content.ReactModal__Content--after-open.SaveAs {
+  @apply absolute overflow-auto rounded mr-[-50%] -translate-x-2/4  lg:w-[44%] xl:w-[24%] h-[17rem] md:w-[62%] w-[90%] -translate-y-2/4 z-[9999] p-5 border-[none] inset-[50%_auto_auto_50%];
+  background: rgb(59, 34, 111);
+  outline: none;
+}
+
+.ReactModal__Content.ReactModal__Content--after-open.KICK_MODAL {
+  @apply absolute overflow-auto rounded mr-[-50%] -translate-x-2/4  lg:w-[44%] xl:w-[35%] h-[17rem] md:w-[62%] w-[90%] -translate-y-2/4 z-[9999] p-5 border-[none] inset-[50%_auto_auto_50%];
+  background: rgb(59, 34, 111);
+  outline: none;
+}
+
+b,
+strong {
+  font-weight: 600 !important;
+}
+
+.css-3pppaa-singleValue {
+  font-size: 14px !important;
+}
+
+.loader {
+  width: 20px;
+  aspect-ratio: 1;
+  display: grid;
+  border-radius: 50%;
+  background:
+    linear-gradient(0deg, rgb(0 0 0/50%) 30%, #0000 0 70%, rgb(0 0 0/100%) 0)
+      50%/8% 100%,
+    linear-gradient(90deg, rgb(0 0 0/25%) 30%, #0000 0 70%, rgb(0 0 0/75%) 0)
+      50%/100% 8%;
+  background-repeat: no-repeat;
+  animation: l23 1s infinite steps(12);
+}
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  border-radius: 60%;
+  background: inherit;
+  opacity: 0.915;
+  transform: rotate(30deg);
+}
+.loader::after {
+  opacity: 0.83;
+  transform: rotate(60deg);
+}
+@keyframes l23 {
+  100% {
+    transform: rotate(1turn);
+  }
+}

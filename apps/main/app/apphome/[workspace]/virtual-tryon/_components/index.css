@@ -1,0 +1,20 @@
+.imageslider_css .slick-prev{
+ left: 30px !important;
+ transform: unset !important;
+ z-index: 999;
+}
+
+.imageslider_css .slick-next{
+  right: 30px !important;
+  transform: unset !important;
+  z-index: 999;
+ }
+
+ .imageslider_css .slick-prev::before ,.imageslider_css .slick-next::before{
+  font-size: 30px;
+ }
+
+ .imageslider_css{
+  margin: 0 auto;
+  width: 100%;
+ }

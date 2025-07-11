@@ -1,0 +1,152 @@
+.sliderStyle .rs-slider-progress-bar {
+  background-color: #ffcb54;
+}
+.sliderStyle .rs-slider-handle::before {
+  border: 2px solid #ffcb54;
+  background-color: #ffcb54;
+}
+
+.calenderStyle .react-date-picker__wrapper {
+  border: none !important;
+  /* margin-top: -4px; */
+  color: white;
+}
+
+.calenderStyle .react-calendar {
+  background: #593a9a;
+  border: none;
+  border-radius: 20px;
+  margin-left: -45px;
+}
+
+.calenderStyle .react-calendar__tile:disabled {
+  background-color: #8297bd;
+  color: white;
+}
+
+.calenderStyle .react-calendar__tile:disabled:hover {
+  background-color: #8297bd !important ;
+}
+.calenderStyle .react-calendar__tile {
+  color: white;
+}
+
+.calenderStyle .react-calendar__tile:hover {
+  color: white;
+  background-color: #5e32ff !important;
+}
+.calenderStyle .react-calendar__navigation button {
+  color: white;
+}
+
+.calenderStyle .react-calendar__navigation button:disabled {
+  color: gray;
+}
+.calenderStyle .react-calendar__navigation button:disabled:hover {
+  color: gray;
+  background-color: #f0f0f0 !important; /* Ensure no background change on hover */
+}
+
+.calenderStyle .react-calendar__navigation button:hover {
+  color: white;
+  background-color: #5e32ff !important; /* Add !important if needed */
+}
+
+.calenderStyle .react-calendar__navigation button:focus {
+  color: white;
+  background-color: transparent !important; /* Add !important if needed */
+}
+.calenderStyle .react-calendar__navigation__prev2-button {
+  border-top-left-radius: 20px;
+}
+.calenderStyle .react-calendar__month-view__weekdays__weekday {
+  color: white;
+}
+
+.calenderStyle .react-calendar__month-view__days__day--weekend {
+  color: red;
+}
+.calenderStyle
+  .react-calendar__month-view__days__day--neighboringMonth:disabled,
+.react-calendar__decade-view__years__year--neighboringDecade:disabled,
+.react-calendar__century-view__decades__decade--neighboringCentury:disabled {
+  color: #dddddd;
+}
+.calenderStyle .react-date-picker__button:enabled {
+  display: none !important;
+}
+
+.calenderStyle .react-calendar__tile--active {
+  background: #5e32ff;
+  color: #ffcb54;
+}
+.calenderStyle .react-calendar__tile--hasActive {
+  background-color: #5e32ff;
+  color: #ffcb54;
+}
+.calenderStyle .react-calendar__tile--now {
+  background-color: #6943ba;
+}
+
+.timeStyle .react-time-picker__wrapper {
+  border: none !important;
+  color: #fff !important;
+  /* margin-top: -3px; */
+}
+
+.react-date-picker--disabled {
+  background-color: transparent !important;
+  color: #6d6d6d;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.react-date-picker__button:disabled .react-date-picker__button__icon {
+  display: none;
+}
+
+.react-time-picker--disabled {
+  background-color: transparent !important;
+  color: #6d6d6d;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.custom-checkbox {
+  /* Hide the default checkbox */
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ffcb54; /* Yellow border */
+  background-color: transparent; /* Initial background */
+  border-radius: 3px; /* Optional: Rounded corners */
+  display: inline-block;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
+}
+
+.custom-checkbox:checked {
+  background-color: #ffcb54; /* Yellow background */
+  border-color: #ffcb54; /* Purple border */
+  position: relative;
+}
+
+.custom-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 5px;
+  border: solid; /* Purple tick */
+  border-width: 2px 2px 0px 0px;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Makes the icon white */
+  cursor: pointer;
+}

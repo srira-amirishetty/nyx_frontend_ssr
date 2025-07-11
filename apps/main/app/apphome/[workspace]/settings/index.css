@@ -1,0 +1,87 @@
+
+.plan_sec {
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.price_data::-webkit-scrollbar {
+  display: none;
+}
+.cursor {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 8px; /* Adjust the width as needed */
+  height: 100%;
+  background-image: linear-gradient(to right, #b631b1, #7048d7);
+  animation: blink 0.8s infinite; /* Adjust animation duration as needed */
+}
+.price_plan_description {
+  min-height: 60px;
+}
+.price_plan_description_yearly {
+  min-height: 60px;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.use_container {
+  background: radial-gradient(
+    72.22% 72.22% at 50% 49.67%,
+    #ffcb54 0%,
+    #ba8b1d 100%
+  );
+}
+
+@media screen and (min-width: 930px) and (max-width: 1280px) {
+  .pricing_upperPart {
+    height: 39% !important;
+  }
+}
+@media screen and (min-width: 983px) and (max-width: 1224px) {
+  .lg_responsive {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards horizontally */
+    gap: 20px; /* Adjust the gap between cards */
+    width: 100%; /* Set the width of the container */
+    max-width: 900px; /* Limit the maximum width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px;
+  }
+  .lg_responsive .card {
+    width: calc(50% - 10px); /* Set the width of each card */
+  }
+  
+  .lg_responsive .card:last-child {
+    margin-right: 0; /* Remove margin from the last card */
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero_sec {
+    background-size: unset;
+    background-position: center;
+    background-position-y: 0px;
+  }
+  .hero_heading_parent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 88%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,3 @@
+runtime: nodejs20
+
+service: ##_SERVICE_NAME##

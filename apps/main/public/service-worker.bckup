@@ -1,0 +1,82 @@
+const now = new Date();
+const hour = now.getHours();
+const timestamp = now.setHours(hour, 0, 0, 0);
+
+// cache version
+const CACHE_VERSION = timestamp;
+const RUNTIME = `nyx-${CACHE_VERSION}`;
+
+// A list of local resources we always want to be cached.
+const PRECACHE_URLS = [];
+
+// The install handler takes care of precaching the resources we always need.
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    caches
+      .open(RUNTIME)
+      .then((cache) => cache.addAll(PRECACHE_URLS))
+      .then(self.skipWaiting()),
+  );
+});
+
+// The activate handler takes care of cleaning up old caches.
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    caches
+      .keys()
+      .then((cachesToDelete) => {
+        return Promise.all(
+          cachesToDelete.map((cacheToDelete) => {
+            return caches.delete(cacheToDelete);
+          }),
+        );
+      })
+      .then(() => self.clients.claim()),
+  );
+});
+
+
+// fetch the resource from the network
+const fromNetwork = (request, timeout) => {
+  return new Promise((fulfill, reject) => {
+    const timeoutId = setTimeout(reject, timeout);
+    fetch(request).then((response) => {
+      clearTimeout(timeoutId);
+      fulfill(response);
+      update(request);
+    }, reject);
+  });
+};
+
+// fetch the resource from the browser cache
+const fromCache = (request) => {
+  return caches
+    .open(RUNTIME)
+    .then((cache) =>
+      cache
+        .match(request)
+        .then((matching) => matching || cache.match("/offline/")),
+    );
+};
+
+// cache the current page to make it available for offline
+const update = (request) => {
+  return caches
+    .open(RUNTIME)
+    .then((cache) =>
+      fetch(request).then((response) => cache.put(request, response)),
+    );
+};
+
+// The fetch handler serves responses for same-origin resources from a cache.
+// If no response is found, it populates the runtime cache with the response
+// from the network before returning it to the page.
+self.addEventListener("fetch", (event) => {
+  // Skip cross-origin requests, like those for Google Analytics.
+  if (event.request.url.startsWith(self.location.origin)) {
+    event.respondWith(
+      fromNetwork(event.request, 10000).catch(() => fromCache(event.request)),
+    );
+    event.waitUntil(update(event.request));
+  }
+});

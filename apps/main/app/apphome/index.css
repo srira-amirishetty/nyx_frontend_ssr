@@ -1,0 +1,30 @@
+.hero_container {
+  background: linear-gradient(53deg, #003163 0.83%, #151515 100.51%);
+}
+.products_container {
+  background: linear-gradient(53deg, #650b92 0.83%, #1d5c9c 100.51%);
+}
+.use_container {
+  background: radial-gradient(
+    72.22% 72.22% at 50% 49.67%,
+    #ffcb54 0%,
+    #ba8b1d 100%
+  );
+}
+
+.product_container {
+  background: linear-gradient(52.6deg, #003163 0.83%, #151515 100.51%);
+}
+.sub_container {
+  background: rgba(0, 56, 86, 1);
+}
+.toolsetcontainer {
+  background: linear-gradient(52.6deg, #650b92 0.83%, #1d5c9c 100.51%);
+}
+
+.sub_container2 {
+  background: #3b226f;
+}
+.hw_works {
+  background: linear-gradient(276.66deg, #041414 -1.37%, #003163 100.67%);
+}

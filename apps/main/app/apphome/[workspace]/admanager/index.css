@@ -1,0 +1,7 @@
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.create-campaign-btn:hover .create-campaign-plus-svg {
+  fill: black;
+}
